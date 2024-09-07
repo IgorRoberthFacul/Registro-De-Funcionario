@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projeto.css">
+    <title>www.funcionarios.com</title>
+</head>
+<body>
+    <div id="resultado" class="result"></div>
+    <script>
+        document.getElementById('resultado').innerHTML = `<p>${mensagem}</p>`;
+    </script>
+    <h1>Cadastro Funcionário</h1>
+    <form id="funcionario-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" required>
+        <br>
+
+        <legend>Cargo:</legend>
+        <select id="cargoFun" required name="cargoFun" class="select-trans">
+            <option value="escolha" hidden>Selecione seu cargo</option>
+            <option value="gerente">Gerente</option>
+            <option value="desenvolvedor">Desenvolvedor</option>
+        </select>
+        <br>
+
+        <label for="departamento">Departamento:</label>
+        <input type="text" id="departamento">
+        <br>
+        <label for="linguagem">Linguagem de Programação:</label>
+        <input type="text" id="linguagem">
+        <br>
+        <button type="submit" style="margin-left: 610px;">Criar Funcionário</button>
+    </form>
+
+    <div id="resultado"></div>
+    <div id="mensagemErro"></div>
+
+    <script src="projeto.js"></script>
+</body>
+</html>

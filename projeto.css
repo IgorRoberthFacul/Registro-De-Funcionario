@@ -1,0 +1,117 @@
+body{
+    background-color: black;
+}
+
+body h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkmagenta;
+    width: auto;
+    font-size: 40px;
+    margin-left: 0px;
+}
+
+h1 {
+    margin-top: 85px;
+}
+
+body h1, form{
+    text-align: center;
+    
+}
+
+body h1, form, input{
+    border-radius: 0,2cm;
+    display: grid;
+    margin-right: auto;    
+}
+
+body, form label, legend, option{
+    margin-left: 10px;
+}
+
+/* Define a aparência do placeholder */
+.select-trans {
+    color: rgba(0, 0, 0, 0.5); /* Texto semi-transparente */
+}
+
+/* Define a aparência das opções na lista suspensa */
+.select-trans option {
+    color: black; /* Cor opaca para as opções no dropdown */
+}
+
+/* Define a aparência do texto do <select> quando uma opção é selecionada */
+.select-trans.selected {
+    color: black; /* Texto opaco quando uma opção é selecionada */
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea, button {
+    max-width: 390px; /* Limite o tamanho máximo para evitar campos muito largos */
+    width: 50%; /* Ajuste a porcentagem conforme necessário */
+    padding: 7px; /* Ajuste o espaçamento interno */
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    margin-left: 520px;
+}
+
+button {
+    margin-top: 35px;
+    width: 200px; /* Você pode ajustar a porcentagem ou usar um valor fixo em px */
+    height: 40px; /* Ajuste a altura conforme necessário */
+    border: none;
+    border-radius: 5px;
+    background-color: indigo;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Espaçamento entre o rótulo e o campo */
+    padding: 10px 15px; /* Adicione um espaçamento interno para tornar o botão mais agradável */
+    font-size: 16px; /* Ajuste o tamanho da fonte para melhor legibilidade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Opcional: adicione uma sombra para um efeito 3D */
+}
+
+button:hover {
+    background-color: steelblue; /* Cor mais escura para o efeito de hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.result {
+    position: fixed;
+    right: 60px;
+    top: 25%;
+    width: 300px;
+    padding: 30px;
+    background-color: #e3e3e3;
+    box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid #888;
+    height: auto;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.result {
+    background-color: #d1d1d1;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
+    ruby-align: center;
+}
+
+.result p {
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: left;
+    color: #555;
+    line-height: 1.6; 
+}
+
+div, #mensagemErro {    
+    text-align: center;
+    margin-top: 50px;       
+}
