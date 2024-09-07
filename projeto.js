@@ -11,10 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
           
             const linguagensValidas = [
                 "Java", "Python", "JavaScript", "PHP", "C", "C++", "C#", "Ruby",
-                "Swift", "Go", "Rust", "Perl", "Kotlin", "Dart"
-            ];
-          
-            if (!nome || isNaN(idade) || idade <= 0 || cargo === 'escolha') {
+                "Swift", "Go", "Rust", "Perl", "Kotlin", "Dart"];
+
+            const soLetras = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+            
+            if(!nome.match(soLetras)){
+                throw new Error("O nome deve conter apenas letras");
+             }
+      
+            if (isNaN(idade) || idade <= 0 || cargo === 'escolha') {
                 throw new Error("Por favor, preencha todos os campos obrigatórios e selecione um cargo.");
             }
 
@@ -23,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (cargo === 'gerente') {
                 if (!departamento) 
                     throw new Error("Gerentes precisam de um departamento.");
+                
+                if(!departamento.match(soLetras)) {
+                   throw new Error("O departamento deve conter apenas letras");
+                }
+                
                 if (linguagem && linguagem.trim() !== '') 
                     throw new Error("Gerentes não devem preencher o campo de linguagem.");
                 funcionario = new Gerente(nome, idade, "Gerente", departamento);
